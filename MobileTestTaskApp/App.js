@@ -56,12 +56,12 @@ export default class App extends React.Component {
 
 
   renderListItem = ({item}) =>
-    <TouchableOpacity onPress={() => this.onPress(item.id)}>
-      <View>
+    <View>
+      <TouchableOpacity onPress={() => this.onPress(item.id)}>
         <Text style={styles.item}>{ item.name }</Text>
-        { this.renderSubListItem(item.id) }
-      </View>
-    </TouchableOpacity>;
+      </TouchableOpacity>
+      { this.renderSubListItem(item.id) }
+    </View>;
 
 
   renderSubListItem = id => {
